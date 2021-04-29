@@ -106,7 +106,8 @@ define([
             xhr.withCredentials = true;
             alert('HIII');
             xhr.addEventListener("readystatechange", function() {
-                 alert('IN FUNCTION');
+                 alert('IN FUNCTION'+this.readyState);
+                
               if(this.readyState === 4) {
                 console.log(this.responseText);
               }
