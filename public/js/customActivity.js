@@ -118,7 +118,7 @@ define([
         //end call
 
         
-        connection.trigger('updateActivity', payload);
+       // connection.trigger('updateActivity', payload);
     }
 
 
