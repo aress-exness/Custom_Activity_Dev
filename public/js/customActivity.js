@@ -100,21 +100,24 @@ define([
         
         //call pushy
         
-        var data = JSON.stringify({"to":"d045904a12ebea17187dcc","data":{"title":"Hello World Rakesh","body":"Hello Rakesh!"},"notification":{"body":"Hello Rakesh"}});
+        var data = JSON.stringify({"to":"d045904a12ebea17187dcc","data":{"title":"Hello World POSTMAN!555","body":"Hello World!"},"notification":{"body":"Hello World ✌"}});
 
-        var config = {
-          method: 'post',
-          url: 'https://api.pushy.me/push?api_key=d7d75e43ed88d5a8a4b27ed84548c78c687c0cf2e2c865e6790e58dd293c5ae5',
-          headers: { 
-            'Content-Type': 'application/json'
-          },
-          data : data
-        };
+            var xhr = new XMLHttpRequest();
+            xhr.withCredentials = true;
 
-        axios(config)
-        .then((response)=>{
-            console.log(JSON.stringify(response.data))
-          })
+            xhr.addEventListener("readystatechange", function() {
+              if(this.readyState === 4) {
+                console.log(this.responseText);
+              }
+            });
+
+            xhr.open("POST", "https://api.pushy.me/push?api_key=d7d75e43ed88d5a8a4b27ed84548c78c687c0cf2e2c865e6790e58dd293c5ae5");
+            xhr.setRequestHeader("Content-Type", "application/json");
+
+            xhr.send(data);
+        
+        
+        //end call
 
         
         connection.trigger('updateActivity', payload);
