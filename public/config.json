@@ -19,7 +19,7 @@
 				{
                     "Title": "{{PushyAPIDictionary.Title}}",
 		    "Data": "{{PushyAPIDictionary.Data}}",
-		    "DeviceToken": "{{Contact.Attribute.PushyAPIDataDictionary.DeviceToken}}"
+		    "DeviceToken": "{{Contact.Attribute."+dataExtensionName+".DeviceToken}}"
                 }									
 			],
           "outArguments": [],
