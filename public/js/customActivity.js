@@ -112,6 +112,7 @@ define([
 
         $.ajax(settings).done(function (response) {
           console.log(response);
+            connection.trigger('updateActivity', payload);
         });
         
         
