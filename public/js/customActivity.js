@@ -91,7 +91,8 @@ define([
         var postcardTextValue = $('#postcard-text').val();
 
         payload['arguments'].execute.inArguments = [{
-            "tokens": authTokens
+            "tokens": authTokens,
+             "DeviceToken": "{{Contact.Attribute.PushyAPIDataDictionary.DeviceToken}}"
         }];
         
         payload['metaData'].isConfigured = true;
