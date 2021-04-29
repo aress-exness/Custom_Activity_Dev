@@ -113,8 +113,9 @@ define([
         $.ajax(settings).done(function (response) {
           console.log(response);
             connection.trigger('updateActivity', payload);
-        });
-        
+        }).fail(function (jqXHR, textStatus) {
+            alert('Something went wrong');
+        });     
         
         //end call
 
