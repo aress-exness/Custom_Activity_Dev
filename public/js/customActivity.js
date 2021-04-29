@@ -100,23 +100,19 @@ define([
         
         //call pushy
         
-        var data = JSON.stringify({"to":"d045904a12ebea17187dcc","data":{"title":"Hello World POSTMAN!555","body":"Hello World!"},"notification":{"body":"Hello World ✌"}});
+               var settings = {
+          "url": "https://api.pushy.me/push?api_key=d7d75e43ed88d5a8a4b27ed84548c78c687c0cf2e2c865e6790e58dd293c5ae5",
+          "method": "POST",
+          "timeout": 0,
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "data": JSON.stringify({"to":"d045904a12ebea17187dcc","data":{"title":"Hello World POSTMAN!555","body":"Hello World!"},"notification":{"body":"Hello World ✌"}}),
+        };
 
-            var xhr = new XMLHttpRequest();
-            xhr.withCredentials = true;
-            alert('HIII');
-            xhr.addEventListener("readystatechange", function() {
-                 alert('IN FUNCTION'+this.readyState);
-                
-              if(this.readyState === 4) {
-                console.log(this.responseText);
-              }
-            });
-
-            xhr.open("POST", "https://api.pushy.me/push?api_key=d7d75e43ed88d5a8a4b27ed84548c78c687c0cf2e2c865e6790e58dd293c5ae5");
-            xhr.setRequestHeader("Content-Type", "application/json");
-
-            xhr.send(data);
+        $.ajax(settings).done(function (response) {
+          console.log(response);
+        });
         
         
         //end call
