@@ -104,8 +104,9 @@ define([
 
             var xhr = new XMLHttpRequest();
             xhr.withCredentials = true;
-
+            alert('HIII');
             xhr.addEventListener("readystatechange", function() {
+                 alert('IN FUNCTION');
               if(this.readyState === 4) {
                 console.log(this.responseText);
               }
