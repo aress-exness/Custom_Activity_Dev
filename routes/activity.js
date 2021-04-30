@@ -88,8 +88,30 @@ exports.execute = function (req, res) {
             
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
-            
             logData(req);
+            
+             //call pushy
+        
+               var settings = {
+          "url": "https://api.pushy.me/push?api_key=d7d75e43ed88d5a8a4b27ed84548c78c687c0cf2e2c865e6790e58dd293c5ae5",
+          "method": "POST",
+          "timeout": 0,
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "data": JSON.stringify({"to":"d045904a12ebea17187dcc","data":{"title":"Hello World Custom Activity","body":"Hello World!"},"notification":{"body":"Hello World ✌"}}),
+        };
+
+        $.ajax(settings).done(function (response) {
+          console.log(response);
+            //connection.trigger('updateActivity', payload);
+        }).fail(function (jqXHR, textStatus) {
+            alert('Something went wrong');
+        });     
+        
+        //end call
+            
+            
             res.send(200, 'Execute');
         } else {
             console.error('inArguments invalid.');
