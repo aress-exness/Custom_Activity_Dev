@@ -16,11 +16,11 @@
     "arguments": {
         "execute": {
            "inArguments":[
-				{
-                    "Title": "{{Event.943F1CE9-2D1B-4F77-AFD9-9F3FE44DD234.Title}}",
-		    "Data": "{{Contact.Attribute.PushyAPIDataDictionary.Data}}",
-		    "DeviceToken": "{{Contact.Attribute.PushyAPIDataDictionary.DeviceToken}}"
-                }									
+				
+		   { "Title": "{{Event.943F1CE9-2D1B-4F77-AFD9-9F3FE44DD234.Title}}"},
+		   { "Data": "{{Contact.Attribute.PushyAPIDataDictionary.Data}}"},
+		   {"DeviceToken": "{{Contact.Attribute.PushyAPIDataDictionary.DeviceToken}}"}
+                									
 			],
           "outArguments": [],
           "url": "https://custom-activity-v1.herokuapp.com/journeybuilder/execute",
