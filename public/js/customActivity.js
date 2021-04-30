@@ -92,13 +92,13 @@ define([
 
        // console.log("dataExtensionName"+dataExtensionName);
         
-        payload['arguments'].execute.inArguments = [{
-            "tokens": authTokens,
-            "Title": "{{Event.943F1CE9-2D1B-4F77-AFD9-9F3FE44DD234.Title}}",
-		    "Data": "{{Contact.Attribute.PushyAPIDataDictionary.Data}}",
-		    "DeviceToken": "{{Contact.Attribute.PushyAPIDataDictionary.DeviceToken}}"
+        payload['arguments'].execute.inArguments = [
+		{"tokens": authTokens},
+		 { "Title": "{{Event.943F1CE9-2D1B-4F77-AFD9-9F3FE44DD234.Title}}"},
+		   { "Data": "{{Contact.Attribute.PushyAPIDataDictionary.Data}}"},
+		   {"DeviceToken": "{{Contact.Attribute.PushyAPIDataDictionary.DeviceToken}}"}
             
-        }];
+        ];
         
         
         payload['metaData'].isConfigured = true;
