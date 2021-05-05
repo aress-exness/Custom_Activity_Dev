@@ -8,7 +8,7 @@
     "type": "REST",
     "lang": {
         "en-US": {
-            "name": "Pushy API 2",
+            "name": "Pushy API",
           "description": "A Template for a custom Journey Builder activity",
           "step1Label": "Configure Activity"
         }
@@ -18,8 +18,8 @@
            "inArguments":[
 				
 		   { "Title": "{{Event.943F1CE9-2D1B-4F77-AFD9-9F3FE44DD234.Title}}"},
-		   { "Data": "{{Contact.Attribute.PushyAPIDataDictionary.Data}}"},
-		   {"DeviceToken": "{{Contact.Attribute.PushyAPIDataDictionary.DeviceToken}}"}
+		   { "Data": "{{Contact.Attribute.PushyAPIDataDictionaryV2.Data}}"},
+		   {"DeviceToken": "{{Contact.Attribute.PushyAPIDataDictionaryV2.DeviceToken}}"}
                 									
 			],
           "outArguments": [],
@@ -33,7 +33,7 @@
         }
     },
     "configurationArguments": {
-      "applicationExtensionKey": "9b57ea26-a5e4-4d56-8a2a-51069b256987",
+      "applicationExtensionKey": "96f4d7ac-b66a-487e-a0ee-99d64ed48ce8",
       "save": {
         "url": "https://custom-activity-v1.herokuapp.com/journeybuilder/save",
           "verb": "POST",
