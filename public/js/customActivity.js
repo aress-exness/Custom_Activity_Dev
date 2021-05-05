@@ -56,7 +56,7 @@ define([
             payload['arguments'] &&
             payload['arguments'].execute &&
             payload['arguments'].execute.inArguments &&
-            payload['arguments'].execute.inArguments.length = 0
+            payload['arguments'].execute.inArguments.length < 0
         );
 
         var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
