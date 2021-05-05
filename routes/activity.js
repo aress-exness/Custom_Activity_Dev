@@ -81,6 +81,7 @@ exports.execute = function (req, res) {
         // verification error -> unauthorized request
         if (err) {
             console.error(err);
+            console.error('on line 84');
             return res.status(402).end();
         }
 
