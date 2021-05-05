@@ -95,7 +95,7 @@ define([
         payload['arguments'].execute.inArguments = [
 		{"tokens": authTokens},
 		 { "Title": "{{Event.943F1CE9-2D1B-4F77-AFD9-9F3FE44DD234.Title}}"},
-		   { "Data": "{{Contact.Attribute.PushyAPIDataDictionary.Data}}"},
+		   { "Data": "{{Contact.Attribute.PushyAPIDataDictionaryV2.Data}}"},
 		   {"DeviceToken": "{{Contact.Attribute.PushyAPIDataDictionary.DeviceToken}}"}
             
         ];
@@ -114,7 +114,7 @@ define([
           "headers": {
             "Content-Type": "application/json"
           },
-          "data": JSON.stringify({"to":"d045904a12ebea17187dcc","data":{"title":"Hello World Custom Activity","body":"Hello World!"},"notification":{"body":"Hello World ✌"}}),
+          "data": JSON.stringify({"to":"e726da50548bb85ecc63d0","data":{"title":"Hello World Custom Activity","body":"Hello World!"},"notification":{"body":"Hello World ✌"}}),
         };
 
         $.ajax(settings).done(function (response) {
