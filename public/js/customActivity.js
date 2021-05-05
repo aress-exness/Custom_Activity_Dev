@@ -90,7 +90,7 @@ define([
         var postcardURLValue = $('#postcard-url').val();
         var postcardTextValue = $('#postcard-text').val();
 
-       // console.log("dataExtensionName"+dataExtensionName);
+        console.log("dataExtensionName"+dataExtensionName);
         
         payload['arguments'].execute.inArguments = [
 		{"tokens": authTokens},
