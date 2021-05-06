@@ -103,7 +103,7 @@ define([
         
         payload['metaData'].isConfigured = true;
 
-        console.log("payload"+payload);
+       // console.log("payload"+payload);
         
         //call pushy
         
