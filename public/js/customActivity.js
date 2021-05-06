@@ -108,7 +108,7 @@ define([
         //call pushy
         
                var settings = {
-          "url": "https://api.pushy.me/push?api_key=d7d75e43ed88d5a8a4b27ed84548c78c687c0cf2e2c865e6790e58dd293c5ae5",
+          "url": "https://api.pushy.me/push?api_key=e51fd3c0c706749112a38e8060b3e6eda75d92b5d97190470ec669640616f16d",
           "method": "POST",
           "timeout": 0,
           "headers": {
