@@ -91,7 +91,7 @@ define([
         var postcardTextValue = $('#postcard-text').val();
 
         //console.log("dataExtensionName"+dataExtensionName);
-        
+        console.log('Save Executed');
         payload['arguments'].execute.inArguments = [
 		{"tokens": authTokens},
 		{ "Title": "{{Event.ADD999E4-C775-4C55-A254-978FF59DE310.Title}}"},
